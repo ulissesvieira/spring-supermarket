@@ -41,7 +41,7 @@ public class AppConfig {
 		LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 		emf.setDataSource(getDataSource());
 		emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());		
-		emf.setPackagesToScan("com.example.hiber.entity");
+		emf.setPackagesToScan("com.springsupermarket.entity");
 		emf.setJpaProperties(getJpaProperties());
 		
 		return emf;
