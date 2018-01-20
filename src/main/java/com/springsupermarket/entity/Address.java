@@ -8,6 +8,17 @@ public class Address {
     private String state;
     private String zip;
 
+    public Address() {}
+
+    public Address(Integer id, String street, String rsNumber, String city, String state, String zip) {
+        this.id = id;
+        this.street = street;
+        this.rsNumber = rsNumber;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
     public Integer getId() {
         return id;
     }

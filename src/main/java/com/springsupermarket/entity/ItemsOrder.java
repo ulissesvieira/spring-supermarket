@@ -6,7 +6,17 @@ public class ItemsOrder {
 	private Product product;
 	private Double quantity;
 	private Double price;
-	
+
+	public ItemsOrder() {}
+
+	public ItemsOrder(Integer id, Order order, Product product, Double quantity, Double price) {
+		this.id = id;
+		this.order = order;
+		this.product = product;
+		this.quantity = quantity;
+		this.price = price;
+	}
+
 	public Integer getId() {
 		return id;
 	}

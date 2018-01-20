@@ -4,7 +4,15 @@ public class Product {
 	private Integer id;
 	private String sku;
 	private String description;
-	
+
+	public Product() {}
+
+	public Product(Integer id, String sku, String description) {
+		this.id = id;
+		this.sku = sku;
+		this.description = description;
+	}
+
 	public Integer getId() {
 		return id;
 	}

@@ -7,7 +7,16 @@ public class Order {
 	private Client client;
 	private Date dateCreated;
 	private Boolean firstTime;
-	
+
+	public Order() {}
+
+	public Order(Integer id, Client client, Date dateCreated, Boolean firstTime) {
+		this.id = id;
+		this.client = client;
+		this.dateCreated = dateCreated;
+		this.firstTime = firstTime;
+	}
+
 	public Integer getId() {
 		return id;
 	}
