@@ -1,7 +1,10 @@
 package com.springsupermarket.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Date;
 
+@Document(collection = "#{ordersRepository.getCollectionName()}")
 public class Order {
 	private Integer id;
 	private Client client;

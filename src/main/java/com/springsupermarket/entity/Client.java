@@ -1,5 +1,8 @@
 package com.springsupermarket.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "#{clientsRepository.getCollectionName()}")
 public class Client {
 	private Integer id;
 	private String name;

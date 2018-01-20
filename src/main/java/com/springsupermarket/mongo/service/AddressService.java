@@ -1,7 +1,6 @@
 package com.springsupermarket.mongo.service;
 
 import com.springsupermarket.entity.Address;
-import com.springsupermarket.entity.Product;
 
 import java.util.List;
 

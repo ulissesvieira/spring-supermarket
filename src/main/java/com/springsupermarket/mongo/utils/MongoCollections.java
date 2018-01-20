@@ -1,4 +1,4 @@
-package com.springsupermarket.mongo;
+package com.springsupermarket.mongo.utils;
 
 public enum MongoCollections {
     ADDRESS("address", "seq_address"),

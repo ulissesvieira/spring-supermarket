@@ -1,5 +1,8 @@
 package com.springsupermarket.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "#{productsRepository.getCollectionName()}")
 public class Product {
 	private Integer id;
 	private String sku;

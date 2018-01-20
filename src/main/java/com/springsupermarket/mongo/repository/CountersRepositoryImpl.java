@@ -1,7 +1,7 @@
 package com.springsupermarket.mongo.repository;
 
-import com.springsupermarket.mongo.MongoCollections;
 import com.springsupermarket.mongo.entiry.Counters;
+import com.springsupermarket.mongo.utils.MongoCollections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoTemplate;

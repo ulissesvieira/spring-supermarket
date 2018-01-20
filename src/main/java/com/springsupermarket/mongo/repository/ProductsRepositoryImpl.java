@@ -9,11 +9,11 @@ import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
 
-public class AddressRepositoryImpl implements UtilsRepository {
+public class ProductsRepositoryImpl implements UtilsRepository {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    private final String COLLECTION_NAME = MongoCollections.ADDRESS.getName();
+    private final String COLLECTION_NAME = MongoCollections.PRODUCTS.getName();
 
     @Override
     public <T> List<T> findByAny(T instance) {

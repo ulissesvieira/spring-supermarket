@@ -1,9 +1,10 @@
 package com.springsupermarket.mongo.repository;
 
-import com.springsupermarket.mongo.entiry.Counters;
+import com.springsupermarket.entity.Client;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CountersRepository extends MongoRepository<Counters, Integer>, CountersRepositoryCustom {
+public interface ClientsRepository extends MongoRepository<Client, Integer>, UtilsRepository {
+
 }
