@@ -4,7 +4,7 @@ import com.springsupermarket.entity.Address;
 
 import java.util.List;
 
-public interface AddressService {
+public interface AddressesService {
     Address findById(Integer id);
     void save(Address address);
     void update(Address address);

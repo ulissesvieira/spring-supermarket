@@ -1,7 +1,7 @@
 package com.springsupermarket.mongo.utils;
 
 public enum MongoCollections {
-    ADDRESS("address", "seq_address"),
+    ADDRESSES("addresses", "seq_addresses"),
     CLIENTS("clients", "seq_clients"),
     ITEMS_ORDERS("items_orders", "seq_items_orders"),
     ORDERS("orders", "seq_orders"),

@@ -2,7 +2,9 @@ package com.springsupermarket.config;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
+import com.springsupermarket.mongo.repository.AddressesRepository;
 import com.springsupermarket.mongo.repository.ProductsRepository;
+import com.springsupermarket.mongo.service.AddressesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +15,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @Configuration
 @EnableMongoRepositories(basePackageClasses=ProductsRepository.class)
 @ComponentScan(basePackageClasses = {
-        com.springsupermarket.mongo.service.AddressService.class,
-        com.springsupermarket.mongo.repository.AddressRepository.class})
+        AddressesService.class,
+        AddressesRepository.class})
 public class MongoConfig extends AbstractMongoConfiguration {
 	@Autowired
 	private Environment env;

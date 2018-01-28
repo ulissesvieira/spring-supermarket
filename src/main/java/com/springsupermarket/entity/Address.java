@@ -2,7 +2,7 @@ package com.springsupermarket.entity;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "#{addressRepository.getCollectionName()}")
+@Document(collection = "#{addressesRepository.getCollectionName()}")
 public class Address {
     private Integer id;
     private String street;
