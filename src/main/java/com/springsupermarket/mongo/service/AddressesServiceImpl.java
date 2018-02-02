@@ -83,12 +83,8 @@ public class AddressesServiceImpl implements AddressesService {
             }
         }
 
-        // calculate start and end item indexes
-        int pageSize = settings.getItemsPerPage();
-        int startIndex = (currentPage - 1) * pageSize;
-        int endIndex = Math.min(startIndex + pageSize - 1, (int) page.getTotalElements() - 1);
         ArrayList<Integer> pages = new ArrayList<>();
-        for (int i = startIndex + 1; i < endIndex; i++)
+        for (int i = startPage; i < endPage + 1; i++)
             pages.add(i);
 
         PaginationResult<Address> result = new PaginationResult<>();
@@ -98,9 +94,7 @@ public class AddressesServiceImpl implements AddressesService {
         result.setCurrentPage(currentPage);
         result.setStartPage(startPage);
         result.setEndPage(endPage);
-        result.setPageSize(pageSize);
-        result.setStartIndex(startIndex);
-        result.setEndIndex(endIndex);
+        result.setPageSize(settings.getItemsPerPage());
         result.setPages(pages.toArray(new Integer[pages.size()]));
 
         return result;

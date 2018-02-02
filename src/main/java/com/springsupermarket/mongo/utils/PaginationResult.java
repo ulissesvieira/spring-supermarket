@@ -9,8 +9,6 @@ public class PaginationResult <T> {
     private Integer totalPages;
     private Integer startPage;
     private Integer endPage;
-    private Integer startIndex;
-    private Integer endIndex;
     private Integer[] pages;
     List<T> items;
 
@@ -60,22 +58,6 @@ public class PaginationResult <T> {
 
     public void setEndPage(Integer endPage) {
         this.endPage = endPage;
-    }
-
-    public Integer getStartIndex() {
-        return startIndex;
-    }
-
-    public void setStartIndex(Integer startIndex) {
-        this.startIndex = startIndex;
-    }
-
-    public Integer getEndIndex() {
-        return endIndex;
-    }
-
-    public void setEndIndex(Integer endIndex) {
-        this.endIndex = endIndex;
     }
 
     public Integer[] getPages() {
