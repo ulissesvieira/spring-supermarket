@@ -2,6 +2,8 @@ package com.springsupermarket.controller;
 
 import com.springsupermarket.entity.Address;
 import com.springsupermarket.mongo.service.AddressesService;
+import com.springsupermarket.mongo.utils.PaginationResult;
+import com.springsupermarket.mongo.utils.PaginationSettings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,20 @@ public class AddressController {
     @GetMapping("list")
     public List<Address> getAll() {
         return addressesService.getAll();
+    }
+
+    @GetMapping("search")
+    PaginationResult<Address> search(@RequestParam("currentPage") Integer currentPage, @RequestParam("itemsPerPage") Integer itemsPerPage) {
+        PaginationSettings settings = new PaginationSettings();
+        settings.setCurrentPage(currentPage);
+        settings.setItemsPerPage(itemsPerPage);
+
+        return addressesService.search(settings);
+    }
+
+    @GetMapping("search2")
+    PaginationResult<Address> search2(@RequestBody PaginationSettings settings) {
+        return addressesService.search(settings);
     }
 
     @PostMapping("save")
