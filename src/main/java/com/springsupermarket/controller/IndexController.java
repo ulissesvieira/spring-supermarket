@@ -1,14 +1,27 @@
 package com.springsupermarket.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
-@RequestMapping("/")
+@Controller
 public class IndexController {
-    @RequestMapping(method = RequestMethod.GET)
-    public String greetings() {
-        return "ATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATA";
+    @GetMapping("/")
+    public String root() {
+        return "index";
+    }
+
+    @GetMapping("/user")
+    public String userIndex() {
+        return "user/index";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/access-denied")
+    public String accessDenied() {
+        return "/error/access-denied";
     }
 }
