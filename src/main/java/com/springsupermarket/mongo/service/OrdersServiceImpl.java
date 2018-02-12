@@ -49,6 +49,6 @@ public class OrdersServiceImpl implements OrdersService {
 
     @Override
     public List<Order> getBy(Order order) {
-        return ordersRepository.findByAny(order);
+        return ordersRepository.findByAny(order, Order.class);
     }
 }

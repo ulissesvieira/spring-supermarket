@@ -1,6 +1,6 @@
 package com.springsupermarket.config;
 
-import org.apache.commons.dbcp2.BasicDataSource;
+/*import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,9 +19,9 @@ import java.util.Properties;
 
 @Configuration
 @PropertySource("classpath:db.properties")
-@EnableTransactionManagement
+@EnableTransactionManagement*/
 public class DBConfig {
-    @Autowired
+    /*@Autowired
     private Environment env;
 
     @Bean
@@ -68,5 +68,5 @@ public class DBConfig {
         props.put("hibernate.default_schema", env.getProperty("db.username"));
 
         return props;
-    }
+    }*/
 }

@@ -16,8 +16,7 @@ public class ProductsRepositoryImpl implements UtilsRepository {
     private final String COLLECTION_NAME = MongoCollections.PRODUCTS.getName();
 
     @Override
-    public <T> List<T> findByAny(T instance) {
-        Class clazz = instance.getClass();
+    public <T> List<T> findByAny(T instance, Class<T> clazz) {        
         Criteria criteria = SearchUtils.anyFieldCriteria(clazz, instance);
 
         Query query = Query.query(criteria);

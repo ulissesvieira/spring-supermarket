@@ -8,6 +8,7 @@ import com.springsupermarket.mongo.service.AddressesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -17,6 +18,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @ComponentScan(basePackageClasses = {
         AddressesService.class,
         AddressesRepository.class})
+@PropertySource("classpath:db.properties")
 public class MongoConfig extends AbstractMongoConfiguration {
 	@Autowired
 	private Environment env;

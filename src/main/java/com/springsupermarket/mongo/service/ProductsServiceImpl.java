@@ -49,6 +49,6 @@ public class ProductsServiceImpl implements ProductsService {
 
     @Override
     public List<Product> getBy(Product product) {
-        return productsRepository.findByAny(product);
+        return productsRepository.findByAny(product, Product.class);
     }
 }

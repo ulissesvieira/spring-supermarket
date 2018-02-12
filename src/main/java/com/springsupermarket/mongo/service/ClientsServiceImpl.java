@@ -49,6 +49,6 @@ public class ClientsServiceImpl implements ClientsService {
 
     @Override
     public List<Client> getBy(Client client) {
-        return clientsRepository.findByAny(client);
+        return clientsRepository.findByAny(client, Client.class);
     }
 }

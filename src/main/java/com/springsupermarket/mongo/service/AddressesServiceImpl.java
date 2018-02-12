@@ -1,19 +1,19 @@
 package com.springsupermarket.mongo.service;
 
-import com.springsupermarket.entity.Address;
-import com.springsupermarket.mongo.repository.AddressesRepository;
-import com.springsupermarket.mongo.repository.CountersRepository;
-import com.springsupermarket.mongo.utils.MongoCollections;
-import com.springsupermarket.mongo.utils.PaginationResult;
-import com.springsupermarket.mongo.utils.PaginationSettings;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.springsupermarket.entity.Address;
+import com.springsupermarket.mongo.repository.AddressesRepository;
+import com.springsupermarket.mongo.repository.CountersRepository;
+import com.springsupermarket.mongo.utils.MongoCollections;
+import com.springsupermarket.mongo.utils.PaginationResult;
+import com.springsupermarket.mongo.utils.PaginationSettings;
 
 @Service
 public class AddressesServiceImpl implements AddressesService {
@@ -55,7 +55,7 @@ public class AddressesServiceImpl implements AddressesService {
 
     @Override
     public List<Address> getBy(Address address) {
-        return addressesRepository.findByAny(address);
+        return addressesRepository.findByAny(address, Address.class);
     }
 
     @Override
